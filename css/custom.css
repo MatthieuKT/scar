@@ -1,0 +1,82 @@
+
+html, body {
+height : 100%;
+margin : 0;
+padding : 0;
+}
+body {
+background-color : black !important ;
+}
+#main {
+text-align : center;
+position : absolute;
+top : 0;
+left : 0;
+width : 100%;
+height : 100%;
+}
+#bckgrndImg {
+height : 100%;
+}
+#mainFilter {
+z-index : 1;
+position : absolute;
+background-color : black;
+height : 100%;
+width : 100%;
+}
+#container {
+border : yellow solid 2px;
+}
+#choicesDisplay {
+position : absolute;
+top : 30%;
+left : 20%;
+width : 60%;
+}
+.choixElt {
+border : black solid 2px;
+font-size : 1.5em;
+width : 100%;
+margin : 0.3em 0 0.3em 0;
+padding : 0.2em;
+color : white;
+background-color : rgba(0, 0, 0, 0.8);
+}
+.choixElt:hover {
+background-color : rgba(0, 0, 0, 1);
+color : grey;
+}
+.choixElt:active {
+border : white solid 2px;
+}
+#dataDisplay {
+text-align : left;
+width : 90%;
+color : white;
+height : 9em;
+overflow : hidden;
+position : absolute;
+bottom : 2em;
+left : 5%;
+font-size : 20px;
+padding : 1em 2em 1em 2em;
+background-color : grey;
+background-color : rgba(0, 0, 0, 0.8);
+}
+.action {
+visibility : hidden;
+position : absolute;
+color : white;
+width : 3.5em;
+}
+.target, .icon {
+color : white;
+text-align : center;
+height : 3.5em;
+line-height : 3.5em;
+white-space : nowrap;
+}
+audio {
+visibility : hidden;
+}

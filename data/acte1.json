@@ -1,0 +1,74 @@
+{
+	"scene1": [{
+			"type": "replique",
+			"speaker": "mere",
+			"texte": "Hé, viens voir les infos!"
+		},
+		{
+			"type": "replique",
+			"speaker": "perso",
+			"texte": "J'arrive..."
+		}
+	],
+	"scene2": [{
+			"type": "replique",
+			"speaker": "perso",
+			"texte": "Dis moi? "
+		},
+		{
+			"type": "replique",
+			"speaker": "mere",
+			"texte": "Ils vont parler des mesures bancaires..."
+		},
+		{
+			"type": "replique",
+			"speaker": "Clarisse Amodia",
+			"texte": "Bonjour, je suis Clarisse Amodia, voici les titres du journal"
+		},
+		{
+			"type": "replique",
+			"speaker": "Clarisse Amodia",
+			"texte": "Les réunions de travail organisées autour des principaux acteurs économiques du pays laissent entrevoir une issue positive. C’est en tout cas ce qu’ont déclaré conjointement le premier ministre et le ministre de l’économie lors d’une conférence de presse après 13h de discussion."
+		},
+		{
+			"type": "replique",
+			"speaker": "Clarisse Amodia",
+			"texte": "En marge des ces réunions, les manifestations se poursuivent partout dans le pays. Les revendications concernant la demande de retrait de la limitation des paiements conditionnés aux revenus des ménages."
+		},
+		{
+			"type": "replique",
+			"speaker": "Clarisse Amodia",
+			"texte": "Les autorités font état d’un nombre important d’arrestations et de blessés. Les représentants des syndicats de police, reçus par le ministre de l’intérieur, demandent des moyens humains et matériels supplémentaires pour faire face à des manifestations qu’ils qualifient d’historiques de par leur ampleur et la tension qui y règne."
+		},
+		{
+			"type": "choix",
+			"speaker": "Perso",
+			"texte": "What we do now...",
+			"choix": [{
+				"choix1": "1: Ne t'inquiète pas"
+			}, {
+				"choix2": "2: Je ne sais pas"
+			}, {
+				"choix3": "3: C'est vrai que c'est bizarre"
+			}],
+			"choix1": [{
+				"speaker": "mere",
+				"texte": "Merci fiston",
+				"score": 1
+			}],
+			"choix2": [{
+				"speaker": "mere",
+				"texte": "Tu sais jamais rien toi."
+			}],
+			"choix3": [{
+				"speaker": "mere",
+				"texte": "t'as vu ça?"
+			}]
+		},
+		{
+			"type": "replique",
+			"speaker": "perso",
+			"texte": "Purée c'est chaud moi jvais dormir."
+		}
+	]
+}
