@@ -4,7 +4,7 @@
 		"desc": "Entrer?",
 		"coordonnees": {
 			"x": "61%",
-			"y": "27%"
+			"y": "23%"
 		},
 		"icon": ["far", "fa-hand-paper", "fa-2x"],
 		"redirect": {
@@ -17,7 +17,7 @@
 		"desc": "Regarder encore un peu",
 		"coordonnees": {
 			"x": "69%",
-			"y": "41%"
+			"y": "37%"
 		},
 		"icon": ["fas", "fa-glasses", "fa-2x"],
 		"textContent": "La marche blanche.... blablabla"

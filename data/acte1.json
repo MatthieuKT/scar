@@ -69,6 +69,11 @@
 			"type": "replique",
 			"speaker": "perso",
 			"texte": "Purée c'est chaud moi jvais dormir."
+		},
+		{
+			"type": "replique",
+			"speaker": "mere",
+			"texte": "Bonne nuit."
 		}
 	]
 }

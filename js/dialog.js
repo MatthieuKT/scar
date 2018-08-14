@@ -56,6 +56,8 @@ ajaxGet("http://localhost/scar/data/acte1.json", function (reponse) {
                   nextElt.addEventListener('click', function() {
                     iteration = iteration+1;
                     testObj.getReplica();
+                    // Réapparition de nextElt
+                    nextElt.style.display = "";
                   });
                 } else if (data === "choix2") {
                   testObj.choix2Display();
@@ -63,6 +65,8 @@ ajaxGet("http://localhost/scar/data/acte1.json", function (reponse) {
                   nextElt.addEventListener('click', function() {
                     iteration = iteration+1;
                     testObj.getReplica();
+                    // Réapparition de nextElt
+                    nextElt.style.display = "";
                   });
                 } else if (data === "choix3") {
                   testObj.choix3Display();
@@ -70,7 +74,12 @@ ajaxGet("http://localhost/scar/data/acte1.json", function (reponse) {
                   nextElt.addEventListener('click', function() {
                     iteration = iteration+1;
                     testObj.getReplica();
+                    // Réapparition de nextElt
+                    nextElt.style.display = "";
                   });
+
+                  // TODO: Itérer ici et getReplica?
+
                 }
               }); // choixElt onclick
           } // if value.type === "choix"
@@ -86,10 +95,6 @@ ajaxGet("http://localhost/scar/data/acte1.json", function (reponse) {
 
 
 
-    // // Rappel: u sers à déterminer quand le dialogue est fini
-    // if (u <= value.length-1) {
-    //    u = u +1 ;
-    //    // A la fin du dialogue
     //    if (u == value.length){ // IDEA: stopper la touche entrée?
     //      // On vide la boite de dialogue
     //      dialogElt.innerHTML = "";

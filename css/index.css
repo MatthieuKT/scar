@@ -1,0 +1,25 @@
+@font-face {
+font-family : 'UrbanJungleDEMO';
+src : url('../fonts/urbanJungle/UrbanJungleDEMO.eot');
+src : url('../fonts/urbanJungle/UrbanJungleDEMO.woff2') format('woff2'), url('../fonts/urbanJungle/UrbanJungleDEMO.woff') format('woff'), url('../fonts/urbanJungle/UrbanJungleDEMO.ttf') format('truetype'), url('../fonts/urbanJungle/UrbanJungleDEMO.svg#UrbanJungleDEMO') format('svg'), url('../fonts/urbanJungle/UrbanJungleDEMO.eot?#iefix') format('embedded-opentype');
+font-weight : normal;
+font-style : normal;
+}
+body {
+background-color : black;
+}
+#main {
+background-image : url("../images/cityscape.jpg");
+background-repeat : no-repeat;
+height : 900px;
+}
+#menu {
+padding-top : 12%;
+text-align : center;
+}
+h1 {
+font-size : 11em;
+font-family : 'UrbanJungleDEMO';
+color : white;
+text-align : center;
+}

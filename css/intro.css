@@ -1,0 +1,14 @@
+#intro {
+  text-align: left;
+  font-size: 25px;
+  padding: 35px;
+  color: white;
+  position: absolute;
+  top:10%;
+  background-color : rgba(0, 0, 0, 0.8);
+}
+#arrow {
+  margin-left: 1em;
+  width: 25px;
+  height: 30px;
+}

@@ -52,13 +52,14 @@ border : white solid 2px;
 }
 #dataDisplay {
 text-align : left;
-width : 90%;
+border: 2px green solid;
+width : 80%;
 color : white;
 height : 9em;
 overflow : hidden;
 position : absolute;
 bottom : 2em;
-left : 5%;
+left : 10%;
 font-size : 20px;
 padding : 1em 2em 1em 2em;
 background-color : grey;

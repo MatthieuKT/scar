@@ -4,7 +4,7 @@ include_once 'layout_header.php';
 ?>
 
   <div id="main" class="col-md-12">
-      <img id="bckgrndImg" src="../images/scene1.gif" class="img-fluid" alt="Responsive image" style="height:50em;">
+      <img id="bckgrndImg" src="../images/scene1.gif" class="img-fluid" alt="Responsive image" style="height:40em;">
       <!-- Div contenant les choix -->
       <div id="choicesDisplay"></div>
       <!-- Div affichant le dialogue -->
