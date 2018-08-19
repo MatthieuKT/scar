@@ -26,7 +26,7 @@ height : 100%;
 width : 100%;
 }
 #container {
-border : yellow solid 2px;
+/* border : yellow solid 2px; */
 }
 #choicesDisplay {
 position : absolute;
@@ -52,18 +52,25 @@ border : white solid 2px;
 }
 #dataDisplay {
 text-align : left;
-border: 2px green solid;
-width : 80%;
+width : 90%;
 color : white;
 height : 9em;
 overflow : hidden;
 position : absolute;
 bottom : 2em;
-left : 10%;
+left : 5%;
 font-size : 20px;
 padding : 1em 2em 1em 2em;
 background-color : grey;
 background-color : rgba(0, 0, 0, 0.8);
+}
+#next, #next2 {
+  position: absolute;
+  top: 69%;
+  left: 75%;
+}
+#next2 {
+  visibility: hidden;
 }
 .action {
 visibility : hidden;

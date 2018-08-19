@@ -11,6 +11,7 @@ include_once 'layout_header.php';
       <div id="dataDisplay">
          <span id="data"></span>
          <button id="next">suiv.</button>
+         <button id="next2">suiv.</button>
       </div>
   </div>
 

@@ -1,6 +1,7 @@
 var choicesDisplay = document.getElementById('choicesDisplay');
 var dialogElt = document.getElementById('data');
 var nextElt = document.getElementById('next');
+var nextElt2 = document.getElementById('next2');
 // permet de situer l'index du texte
 var iteration = 0;
 
@@ -25,87 +26,110 @@ ajaxGet("http://localhost/scar/data/acte1.json", function (reponse) {
 
     if(index === keytofind){ // IDEA: penser à stopper la boucle à ce stade
       req_index = i;
-      // Initialise la boite de dialogue
+
+      // Initialisation du premier texte à l'ouverture de la page
       if (iteration === 0) {
         testObj.initDialog(value);
-        testObj.getReplica();
-        iteration = iteration+1;
+        dialogElt.textContent = value[0].texte;
       }
 
-      // Au clic du boutno suivant
-      nextElt.addEventListener('click', function() {
-        // Tant que l'o a pas atteint la fin du dialogue
-        if (value.length !== iteration ) {
-          // Si c'est une réplique normale
-          if (value[iteration].type === "replique"){
-              testObj.getReplica();
-              iteration = iteration+1;
-            }
-            // Si c'est un type choix
-            else if (value[iteration].type === "choix") {
-              // On affiche les différents choix
-              testObj.getChoices();
-              // disparition du bouton next lors du choix
-              nextElt.style.display = 'none';
-              // Lors du choix du dialogue
-              $('.choixElt').on('click', function() {
-                var data = $(this).attr('data')
-                if (data === "choix1") {
-                  testObj.choix1Display();
-                  // 3: A la fin de tout ça, on reviens au dialogue normal
-                  nextElt.addEventListener('click', function() {
-                    iteration = iteration+1;
-                    testObj.getReplica();
-                    // Réapparition de nextElt
-                    nextElt.style.display = "";
-                  });
-                } else if (data === "choix2") {
-                  testObj.choix2Display();
-                  // 3: A la fin de tout ça, on reviens au dialogue normal
-                  nextElt.addEventListener('click', function() {
-                    iteration = iteration+1;
-                    testObj.getReplica();
-                    // Réapparition de nextElt
-                    nextElt.style.display = "";
-                  });
-                } else if (data === "choix3") {
-                  testObj.choix3Display();
-                  // 3: A la fin de tout ça, on reviens au dialogue normal
-                  nextElt.addEventListener('click', function() {
-                    iteration = iteration+1;
-                    testObj.getReplica();
-                    // Réapparition de nextElt
-                    nextElt.style.display = "";
-                  });
 
-                  // TODO: Itérer ici et getReplica?
+nextElt.addEventListener('click', function() {
 
-                }
-              }); // choixElt onclick
-          } // if value.type === "choix"
-        }
-        // Si l'on a atteint la fin du dialogue
-        else if (value.length === iteration ) {
-          testObj.dialogEnd();
-        }
+  // Si l'on a atteint la fin du dialogue
+  if (iteration === value.length-1) {
+    console.log("the end");
+    testObj.dialogEnd();
+  }
 
-      });
+  // Si c'est une réplique normale
+  else if (value[iteration].type === "replique"){
+    iteration = iteration+1;
+    dialogElt.textContent = value[iteration].texte;
+
+  }
+
+  else if (value[iteration].type === "choix") {
+    nextElt.style.display = 'none';
+    dialogElt.textContent = value[iteration].texte;
+    testObj.getChoices();
+
+    var a = 0;
+    $('.choixElt').on('click', function(e) {
+      e.stopPropagation();
+      var data = $(this).attr('data');
+      if (data === "choix1") {
+        nextElt2.style.visibility = "visible";
+        choicesDisplay.style.display = 'none';
+        // initialise le compteur de repliques contenu dans le choix en question
+        dialogElt.textContent = value[iteration].choix1[a][1];
+        a = a+1;
+
+        $('#next2').on('click', function() {
+          if (a < value[iteration].choix1.length) {
+            dialogElt.textContent = value[iteration].choix1[a][1];
+            a = a+1;
+          }
+          else if (a === value[iteration].choix1.length) {
+            nextElt2.style.visibility = "hidden";
+            // On passe au noeud suivant
+            nextElt.style.display = '';
+            iteration = iteration+1;
+            dialogElt.textContent = value[iteration].texte;
+          }
+        });
+      }// choix1
+
+      else if (data === "choix2") {
+        nextElt2.style.visibility = "visible";
+        choicesDisplay.style.display = 'none';
+        // initialise le compteur de repliques contenu dans le choix en question
+        dialogElt.textContent = value[iteration].choix2[a][1];
+        a = a+1;
+
+        $('#next2').on('click', function() {
+          if (a < value[iteration].choix2.length) {
+            dialogElt.textContent = value[iteration].choix2[a][1];
+            a = a+1;
+          }
+          else if (a === value[iteration].choix2.length) {
+            nextElt2.style.visibility = "hidden";
+            // On passe au noeud suivant
+            nextElt.style.display = '';
+            iteration = iteration+1;
+            dialogElt.textContent = value[iteration].texte;
+          }
+        });
+      }// choix2
+
+      else if (data === "choix3") {
+        nextElt2.style.visibility = "visible";
+        choicesDisplay.style.display = 'none';
+        // initialise le compteur de repliques contenu dans le choix en question
+        dialogElt.textContent = value[iteration].choix3[a][1];
+        a = a+1;
+
+        $('#next2').on('click', function() {
+          if (a < value[iteration].choix3.length) {
+            dialogElt.textContent = value[iteration].choix3[a][1];
+            a = a+1;
+          }
+          else if (a === value[iteration].choix3.length) {
+            nextElt2.style.visibility = "hidden";
+            // On passe au noeud suivant
+            nextElt.style.display = '';
+            iteration = iteration+1;
+            dialogElt.textContent = value[iteration].texte;
+          }
+        });
+      }// choix3
+    }); //choixElt click
+  }// if value.type === "choix"
+}); // Au click du bouton next
 
 
 
-
-
-    //    if (u == value.length){ // IDEA: stopper la touche entrée?
-    //      // On vide la boite de dialogue
-    //      dialogElt.innerHTML = "";
-    //      // disparition de la boite de dialogue
-    //      $('#dataDisplay').fadeOut();
-    //      // Apparition des targets
-    //      $(".action").css('visibility', 'visible');
-    //    }
-    // }
-
-    }; // if index = keytofind
-    // i++; // Itère tant que l'index n'est pas égal à keytofind
- }); // $.each
+}; // if index = keytofind
+// i++; // Itère tant que l'index n'est pas égal à keytofind
+}); // $.each
 }); // AJAX call
