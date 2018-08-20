@@ -129,7 +129,11 @@ nextElt.addEventListener('click', function() {
 
 
 
-}; // if index = keytofind
+} // if index = keytofind
+else { // Alors cette page ne contient aucun dialogue
+  $(dataDisplay).css('display', 'none');
+  $(".action").css('visibility', 'visible');
+}
 // i++; // Itère tant que l'index n'est pas égal à keytofind
 }); // $.each
 }); // AJAX call

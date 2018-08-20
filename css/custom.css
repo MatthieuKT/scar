@@ -24,6 +24,7 @@ position : absolute;
 background-color : black;
 height : 100%;
 width : 100%;
+border: 2px green solid;
 }
 #container {
 /* border : yellow solid 2px; */

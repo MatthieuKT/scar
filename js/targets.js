@@ -38,8 +38,8 @@ ajaxGet("http://localhost/scar/data/targets.json", function (reponse) {
         var aElt = document.createElement("a");
         aElt.appendChild(iElt1)
 
-        if (target.redirect) { // Le lien correspond au target.link
-          aElt.href = target.redirect.link;
+        if (target.link) { // Le lien correspond au target.link
+          aElt.href = target.link;
         } else {
           aElt.href = "#";
           // On lui attribue la classe des liens désactivés
@@ -74,14 +74,8 @@ ajaxGet("http://localhost/scar/data/targets.json", function (reponse) {
         mainElt.appendChild(actionElt);
 
 
-
-// IDEA: Doit-on placer ce code dans le call AJAX ou plutot dans l'UI/UX?
-
 // repérage des éléments
 targetElt = document.getElementsByClassName('target');
-
-// TODO: insérer d'abord l'icone dans iconElt et au mouseenter/mouseleave
-// jouer sur l'apparition.
 
 // Zoom sur la target au survol
 $(iElt1).mouseenter( function() {

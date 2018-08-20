@@ -1,25 +1,49 @@
 {
 	"scene1": [{
-		"id": 0,
 		"desc": "Entrer?",
 		"coordonnees": {
 			"x": "61%",
 			"y": "23%"
 		},
 		"icon": ["far", "fa-hand-paper", "fa-2x"],
-		"redirect": {
-			"link": "scene2.php?c=scene2",
-			"img": "../images/scene1.jpg"
-		}
+		"link": "scene2.php?c=scene2"
 	}],
 	"scene2": [{
-		"id": 0,
-		"desc": "Regarder encore un peu",
-		"coordonnees": {
-			"x": "69%",
-			"y": "37%"
+			"desc": "Regarder encore un peu",
+			"coordonnees": {
+				"x": "69%",
+				"y": "37%"
+			},
+			"icon": ["fas", "fa-glasses", "fa-2x"],
+			"textContent": "La marche blanche.... blablabla"
 		},
-		"icon": ["fas", "fa-glasses", "fa-2x"],
-		"textContent": "La marche blanche.... blablabla"
-	}]
+		{
+			"desc": "chambre",
+			"coordonnees": {
+				"x": "5%",
+				"y": "50%"
+			},
+			"icon": ["fas", "fa-glasses", "fa-2x"],
+			"textContent": "La marche blanche.... blablabla",
+			"link": "scene3.php?c=scene3"
+		}
+	],
+	"scene3": [{
+			"desc": "Dormir?",
+			"coordonnees": {
+				"x": "75%",
+				"y": "57%"
+			},
+			"icon": ["fas", "fa-bed", "fa-2x"],
+			"link": "animation.php"
+		},
+		{
+			"desc": "Lire les mails",
+			"coordonnees": {
+				"x": "38%",
+				"y": "43%"
+			},
+			"icon": ["fas", "fa-desktop", "fa-2x"]
+		}
+	]
 }
