@@ -15,38 +15,45 @@ ajaxGet("http://localhost/scar/data/acte1.json", function (reponse) {
   // Récupère le paramètre de l'url concernant un écran en particulier
   var keytofind = url.searchParams.get("c");
 
-
   // Initialisation des variables
   var i = 0, req_index = "";
   var testObj = Object.create(Dialog);
+
+  // https://stackoverflow.com/questions/2281633/javascript-isset-equivalent
+  if (keytofind in dialog) {
+    console.log("on est bons là non ? ");
+  } else {
+    console.log("héhé, on l'a trouvé notre else");
+  }
   // parcourt les ecrans contenus dans la requête
   $.each(dialog, function(index, value){
-    // Si l'index correspond au paramètre de la page recherchée dans l'URL
-    // IDEA: Ici on pourrait placer l'URL de l'image à insérer dans le mainElt
 
+    // Si l'index correspond au paramètre de la page recherchée dans l'URL
     if(index === keytofind){ // IDEA: penser à stopper la boucle à ce stade
       req_index = i;
 
       // Initialisation du premier texte à l'ouverture de la page
       if (iteration === 0) {
         testObj.initDialog(value);
-        dialogElt.textContent = value[0].texte;
+        dialogElt.textContent = value[0].speaker + ": " + value[0].texte;
       }
-
 
 nextElt.addEventListener('click', function() {
 
   // Si l'on a atteint la fin du dialogue
   if (iteration === value.length-1) {
-    console.log("the end");
     testObj.dialogEnd();
   }
 
   // Si c'est une réplique normale
   else if (value[iteration].type === "replique"){
     iteration = iteration+1;
-    dialogElt.textContent = value[iteration].texte;
-
+    if (value[iteration].speaker) {
+      dialogElt.textContent = value[iteration].speaker + ": " + value[iteration].texte;
+    }
+    else {
+      dialogElt.textContent = value[iteration].texte;
+    }
   }
 
   else if (value[iteration].type === "choix") {
@@ -126,14 +133,7 @@ nextElt.addEventListener('click', function() {
     }); //choixElt click
   }// if value.type === "choix"
 }); // Au click du bouton next
-
-
-
 } // if index = keytofind
-else { // Alors cette page ne contient aucun dialogue
-  $(dataDisplay).css('display', 'none');
-  $(".action").css('visibility', 'visible');
-}
-// i++; // Itère tant que l'index n'est pas égal à keytofind
+
 }); // $.each
 }); // AJAX call

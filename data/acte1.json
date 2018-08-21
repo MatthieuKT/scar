@@ -11,14 +11,27 @@
   "scene2" : [
     { "type" : "replique",
       "speaker" : "mere",
-      "texte" : "test"
+      "texte" : "Regarde, ils vont parler au sujet des nouvelles restrictions"
+    },
+    { "type" : "replique",
+      "speaker" : "journal",
+      "texte" : "Bonjour, je suis Clarisse Amaudio, voici les titres de ce journal :"
+    },
+    { "type" : "replique",
+      "texte" : "Les réunions de travail organisées autour des principaux acteurs économiques du pays laissent entrevoir une issue positive."
+    },
+    { "type" : "replique",
+      "texte" : "C’est en tout cas ce qu’ont déclaré conjointement le premier ministre et le ministre de l’économie lors d’une conférence de presse après 13h de discussion."
+    },
+    { "type" : "replique",
+      "texte" : "En marge des ces réunions, les manifestations se poursuivent partout dans le pays. Les revendications concernant la demande de retrait de la limitation des paiements conditionnés aux revenus des ménages."
     },
     { "type" : "choix",
       "speaker" : "mere",
       "texte" : "Ils disent qu'ils vont limiter les retraits c'est ça? ça sens mauvais...",
       "choix" : [{"choix1": "1: Ne t'inquiète pas"},{"choix2" : "2: Je ne sais pas"}, {"choix3" : "3: C'est vrai que c'est bizarre"}],
       "choix1" : [
-                    ["perso", "Ne t'inquiete pas, pour le moment il n'y a pas de raisons de s'inquiéter."],
+                    ["perso", "Ne t'en fais pas, pour le moment il n'y a pas de raisons de s'inquiéter."],
                     ["mere", "c'est vrai tu as sûrement raison, tu feras quand même quelques provisions demain."]
                  ],
       "choix2" : [
@@ -33,7 +46,7 @@
     },
     { "type" : "replique",
       "speaker" : "perso",
-      "texte" : "Bon allez, au dodo"
+      "texte" : "Je vais me coucher."
     },
     { "type" : "replique",
       "speaker" : "mere",
