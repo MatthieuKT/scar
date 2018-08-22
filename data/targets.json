@@ -35,7 +35,7 @@
 				"y": "57%"
 			},
 			"icon": ["fas", "fa-bed", "fa-2x"],
-			"link": "animation.php"
+			"link": "scene4.php"
 		},
 		{
 			"desc": "Lire les mails",

@@ -132,6 +132,8 @@ ajaxGet("http://localhost/scar/data/acte1.json", function (reponse) {
     nextElt.style.display = "none";
     document.getElementById("dataDisplay").style.display = 'none';
     // On fait apparaître les .action
-    $(".action").css('visibility', 'visible');
+    $( document ).ready(function() {
+      $(".action").css('visibility', 'visible');
+    });    
   }
 }); // AJAX call
