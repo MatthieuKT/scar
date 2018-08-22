@@ -44,6 +44,14 @@
 				"y": "43%"
 			},
 			"icon": ["fas", "fa-desktop", "fa-2x"]
+		},
+		{
+			"desc": "Le frigo est quasiment vide.",
+			"coordonnees": {
+				"x": "71%",
+				"y": "47%"
+			},
+			"icon": ["fas", "fa-glasses", "fa-2x"]
 		}
 	]
 }
