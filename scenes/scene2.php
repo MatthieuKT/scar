@@ -8,12 +8,18 @@ include_once 'layout_header.php';
     <img id="bckgrndImg" src="../images/salon.jpg" class="img-fluid" alt="Responsive image" style="height:50em;">
     <!-- Div contenant les choix -->
     <div id="choicesDisplay"></div>
-    <!-- Div affichant le dialogue -->
-    <div id="dataDisplay">
-       <span id="data"></span>
-       <button id="next">suiv.</button>
-       <button id="next2">suiv.</button>
-    </div>
+  </div>
+
+  <!-- Div affichant le dialogue -->
+  <div id="dataDisplay">
+     <span id="data"></span>
+     <button id="next">suiv.</button>
+     <button id="next2">suiv.</button>
+  </div>
+
+  <div id="info">
+    <span id="infoTarget"></span>
+    <span id="infoAction"></span>
   </div>
 
   <!-- Sons d'ambiance -->

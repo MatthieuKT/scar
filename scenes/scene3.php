@@ -16,6 +16,11 @@ include_once 'layout_header.php';
     </div>
   </div>
 
+  <div id="info">
+    <span id="infoTarget"></span> <br>
+    <span id="infoAction"></span>
+  </div>
+
   <!-- Sons d'ambiance -->
   <audio id="ambiance" controls autoplay>
    <source src="../sons/ambiance2.ogg" type="audio/ogg">

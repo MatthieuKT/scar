@@ -10,6 +10,7 @@ body {
     margin: 0;
     font-family: Arial;
     font-size: 17px;
+    background-color: black;
 }
 #Video {
     position: fixed;
@@ -31,7 +32,7 @@ body {
   var video = document.getElementById('video');
   // Redirection vers la scene suivante à la fin de la vidéo
   video.onended = function() {
-    document.location = 'intro.php';
+    document.location = 'scene5.php';
 };
 </script>
 </body>

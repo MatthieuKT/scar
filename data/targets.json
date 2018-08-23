@@ -29,7 +29,8 @@
 		}
 	],
 	"scene3": [{
-			"desc": "Dormir?",
+			"name": "Lit",
+			"action": "Dormir?",
 			"coordonnees": {
 				"x": "75%",
 				"y": "57%"
@@ -38,7 +39,8 @@
 			"link": "scene4.php"
 		},
 		{
-			"desc": "Lire les mails",
+			"name": "Ordinateur",
+			"action": "Lire les mails",
 			"coordonnees": {
 				"x": "38%",
 				"y": "43%"
@@ -46,6 +48,8 @@
 			"icon": ["fas", "fa-desktop", "fa-2x"]
 		},
 		{
+			"name": "Frigo",
+			"action": "Examiner",
 			"desc": "Le frigo est quasiment vide.",
 			"coordonnees": {
 				"x": "71%",

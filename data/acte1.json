@@ -28,7 +28,7 @@
     },
     { "type" : "choix",
       "speaker" : "mere",
-      "texte" : "Ils disent qu'ils vont limiter les retraits c'est ça? ça sens mauvais...",
+      "texte" : "Ils disent qu'ils vont limiter les retraits c'est ça? ça sent mauvais...",
       "choix" : [{"choix1": "1: Ne t'inquiète pas"},{"choix2" : "2: Je ne sais pas"}, {"choix3" : "3: C'est vrai que c'est bizarre"}],
       "choix1" : [
                     ["perso", "Ne t'en fais pas, pour le moment il n'y a pas de raisons de s'inquiéter."],
@@ -39,7 +39,7 @@
                     ["mere", "Tu sais jamais rien toi. C'est évident que ça n'annonce rien de bon..."]
                  ],
       "choix3" : [
-                    ["perso", "C'est vrai que c'est bizarre, ça sens le roussi pour les jours à venir"],
+                    ["perso", "C'est vrai que c'est bizarre, ça sent le roussi pour les jours à venir"],
                     ["mere", "Moi aussi ça m'inquiète un peu. On devrait prendre quelques précautions"],
                     ["perso", "C'est sûr, demain j'irai faire quelques provisions, on ne sais jamais."]
                  ]

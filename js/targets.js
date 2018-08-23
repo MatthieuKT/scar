@@ -1,5 +1,7 @@
-ajaxGet("http://localhost/scar/data/targets.json", function (reponse) {
+var infoTarget= document.getElementById('infoTarget')
+var infoAction = document.getElementById('infoAction');
 
+ajaxGet("http://localhost/scar/data/targets.json", function (reponse) {
   // Stockage des données JSON dans une variable JS
   var targets = JSON.parse(reponse);
 
@@ -81,14 +83,21 @@ targetElt = document.getElementsByClassName('target');
 $(iElt1).mouseenter( function() {
   $(iElt1).removeClass("fa-circle").addClass("fa-dot-circle");
   $(iElt2).css('visibility', 'visible');
-  // displayElt.innerHTML=target.name;
+  infoTarget.textContent=target.name;
+  infoAction.textContent=target.action;
 });
 // Dézoom de la target à la sortie de souris
 $(iElt1).mouseleave(function() {
   $(iElt1).removeClass("fa-dot-circle").addClass("fa-circle");
   $(iElt2).css('visibility', 'hidden');
-  // displayElt.innerHTML="";
+  infoTarget.textContent="";
+  infoAction.textContent="";
 });
+
+$(iElt1).click(function() {
+  console.log('yo');
+});
+
 
 // Désactive les liens
 $('a.lock').click(function(){

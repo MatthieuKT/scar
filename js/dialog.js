@@ -131,9 +131,9 @@ ajaxGet("http://localhost/scar/data/acte1.json", function (reponse) {
 } else { // La scene ne contient aucun dialogue, on affiche pas #dataDisplay
     nextElt.style.display = "none";
     document.getElementById("dataDisplay").style.display = 'none';
-    // On fait apparaître les .action
+    // On fait apparaître les .action une fois le document bien chargé
     $( document ).ready(function() {
       $(".action").css('visibility', 'visible');
-    });    
+    });
   }
 }); // AJAX call
